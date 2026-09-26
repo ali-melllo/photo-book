@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const SITE_NAME = "مهرورو";
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://mehrvaro.com";
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.google.com";
 export const SITE_DESCRIPTION =
   "مهرورو، سازنده کتاب‌های عکس شخصی؛ خاطرات و لحظات زندگی خود را به زیباترین شکل چاپ کنید.";
 

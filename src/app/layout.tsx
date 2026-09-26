@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: `${SITE_NAME} | کتاب‌های عکس شخصی`,
     path: "/",
   }),
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://mehrvaro.com"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.google.com"),
   title: {
     default: `${SITE_NAME} | کتاب‌های عکس شخصی`,
     template: `%s | ${SITE_NAME}`,
