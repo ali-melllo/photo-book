@@ -18,7 +18,7 @@ export function ProductCard({ product }: { product: Product }) {
     >
       <div className="relative aspect-[4/5] overflow-hidden bg-muted">
         <Image
-          src={product.image}
+          src={"/assets/images/sample.webp"}
           alt={product.title}
           fill
           sizes="(min-width: 1024px) 20vw, (min-width: 640px) 33vw, 50vw"
