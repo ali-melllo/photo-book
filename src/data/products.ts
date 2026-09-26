@@ -72,6 +72,7 @@ export const products: Product[] = [
     id: "p-family",
     title: "خانوادگی",
     slug: "khanevadegi",
+    badge:"50% OFF",
     image: "https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=800&auto=format&fit=crop",
     price: 349000,
     rating: 5,

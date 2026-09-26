@@ -14,9 +14,9 @@ export function ProductCard({ product }: { product: Product }) {
   return (
     <Link
       href={`/shop/${product.slug}`}
-      className="group block overflow-hidden rounded-2xl border border-border bg-card shadow-card transition-shadow hover:shadow-soft"
+      className="group flex flex-col min-h-[18em] md:min-h-[22em] shadow-lg mb-5 overflow-hidden relative rounded-2xl border border-border transition-shadow hover:shadow-soft"
     >
-      <div className="relative aspect-[4/5] overflow-hidden bg-muted">
+      <div className="relative aspect-[4/5] overflow-hidden ">
         <Image
           src={"/assets/images/sample.webp"}
           alt={product.title}
@@ -25,25 +25,14 @@ export function ProductCard({ product }: { product: Product }) {
           className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
         />
         {product.badge && (
-          <Badge variant="lavender" className="absolute top-3 right-3">
+          <Badge className="absolute bg-gradient-to-r from-primary/60 to-primary/40 !pt-2 top-2 text-white font-bold shadow left-2">
             {product.badge}
           </Badge>
         )}
-        <button
-          type="button"
-          aria-label={isFavorite ? "حذف از علاقه‌مندی‌ها" : "افزودن به علاقه‌مندی‌ها"}
-          aria-pressed={isFavorite}
-          onClick={(e) => {
-            e.preventDefault();
-            setIsFavorite((v) => !v);
-          }}
-          className="absolute left-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-navy shadow-sm transition-colors hover:bg-white"
-        >
-          <Heart className={cn("h-4 w-4 transition-colors", isFavorite && "fill-destructive text-destructive")} />
-        </button>
+        
       </div>
 
-      <div className="p-4">
+      <div className="p-4 bg-gradient-to-t from-red-400/30 to-transparent w-full bottom-0 absolute z-20">
         <p className="text-xs text-muted-foreground">{product.category}</p>
         <h3 className="mt-1 text-[15px] font-semibold text-foreground">{product.title}</h3>
 
