@@ -14,28 +14,28 @@ type BuildMetadataInput = {
 
 /** Builds consistent Next.js Metadata (title, OG, Twitter, canonical) for a route. */
 export function buildMetadata({ title, description, path = "/", image }: BuildMetadataInput): Metadata {
-  const url = `${SITE_URL}${path}`;
+  // const url = `${SITE_URL}${path}`;
   const desc = description ?? SITE_DESCRIPTION;
-  const ogImage = image ?? `${SITE_URL}/og-image.png`;
+  // const ogImage = image ?? `${SITE_URL}/og-image.png`;
 
   return {
     title,
     description: desc,
-    alternates: { canonical: url },
+    // alternates: { canonical: url },
     openGraph: {
       title,
       description: desc,
-      url,
-      siteName: SITE_NAME,
+      // url,
+      // siteName: SITE_NAME,/
       locale: "fa_IR",
       type: "website",
-      images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
+      // images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description: desc,
-      images: [ogImage],
+      // images: [ogImage],
     },
   };
 }
